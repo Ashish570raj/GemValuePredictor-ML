@@ -1,0 +1,69 @@
+# -----------------------------
+# Python & Virtual Environment
+# -----------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.pickle
+
+# Ignore your virtual environment folder
+gemenv/
+venv/
+.env/
+.venv/
+
+# -----------------------------
+# Jupyter & Streamlit Files
+# -----------------------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+.DS_Store
+*.log
+*.tmp
+*.bak
+
+# -----------------------------
+# Data Files
+# -----------------------------
+*.csv
+*.zip
+*.xlsx
+*.xls
+*.json
+
+# Keep only necessary dataset if required
+# Uncomment below if you want to keep diamond_cleaned.csv for demo
+# !diamond_cleaned.csv
+
+# -----------------------------
+# Model Artifacts
+# -----------------------------
+catboost_info/
+*.cbm
+*_model.pkl
+final_model.pkl
+1_final_model.pkl
+
+# -----------------------------
+# Streamlit & Cache
+# -----------------------------
+.streamlit/
+.cache/
+logs/
+__pycache__/
+
+# -----------------------------
+# VS Code & IDE files
+# -----------------------------
+.vscode/
+.idea/
+*.code-workspace
+
+# -----------------------------
+# OS files
+# -----------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
