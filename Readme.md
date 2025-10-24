@@ -1,179 +1,56 @@
+# 💎 Gemstone Price Prediction using Machine Learning
 
-
-```markdown
-# Gemstone Price Predictor
-
-### 📈 Predict the price of diamonds and gemstones with Machine Learning
-
-This project predicts the **price of gemstones** based on their key features such as **carat, cut, color, clarity, depth, and table**.  
-It uses a **CatBoost Regression Model** trained on real diamond data and is deployed using **Streamlit Cloud** for an interactive experience.
+A Machine Learning web app built using **CatBoost Regressor** to predict gemstone (diamond) prices based on key attributes such as **carat, cut, color, clarity, depth, and table**.  
+This project is deployed using **Streamlit Cloud** and allows users to interactively input gemstone features and instantly get the predicted price.
 
 ---
 
-## 🚀 Demo
+## 🚀 Project Overview
 
-🔗 **Live App:** [Gemstone Price Predictor (Streamlit)](https://your-streamlit-app-url)  
-📂 **GitHub Repo:** [Gemstone Price Predictor](https://github.com/yourusername/Gemstone-Price-Predictor)
+The goal of this project is to accurately predict the **price of diamonds** based on their physical characteristics and quality attributes.  
+Multiple regression models were tested — including Linear Regression, Ridge, Lasso, Decision Tree, Random Forest, XGBoost, and CatBoost — with **CatBoost Regressor** emerging as the best performer.
 
 ---
 
-## 🧠 Features
+## 📊 Model Performance Comparison
 
-- 🖥️ User-friendly web interface built with **Streamlit**
-- 💎 Predict gemstone prices instantly
-- 📊 Dropdown menus for categorical features (`cut`, `color`, `clarity`)
-- 🤖 Uses **CatBoost Regressor** for high accuracy
-- ☁️ Ready for deployment on **Streamlit Cloud**
+| Model Name                | R² Score |
+|----------------------------|----------|
+| **CatBoost Regressor**     | **0.9793** |
+| XGB Regressor              | 0.9787 |
+| Random Forest Regressor    | 0.9771 |
+| K-Neighbors Regressor      | 0.9721 |
+| Decision Tree              | 0.9568 |
+| Linear Regression          | 0.9373 |
+| Ridge                      | 0.9373 |
+| Lasso                      | 0.9372 |
+
+✅ **Final Model Used:** CatBoost Regressor  
+📦 Model saved as: `1_final_model.pkl`
+
+---
+
+## 🧠 Features Used for Prediction
+
+| Feature | Description |
+|----------|-------------|
+| **Carat** | Weight of the diamond |
+| **Cut** | Quality of the cut (Fair, Good, Very Good, Premium, Ideal) |
+| **Color** | Diamond color grade (J, I, H, G, F, E, D) |
+| **Clarity** | Measure of how clear the diamond is (I1, SI2, SI1, VS2, VS1, VVS2, VVS1, IF) |
+| **Depth** | Total depth percentage |
+| **Table** | Width of top of diamond relative to widest point |
 
 ---
 
 ## 🧩 Tech Stack
 
-| Component | Technology Used |
-|------------|-----------------|
-| Programming Language | Python 🐍 |
-| Frontend | Streamlit |
-| Machine Learning | CatBoost Regressor |
-| Data Analysis | Pandas, NumPy |
-| Visualization | Matplotlib, Seaborn |
-| Model Storage | Joblib (`.pkl` file) |
-
+- **Python 3.12+**
+- **CatBoost Regressor**
+- **Scikit-learn**
+- **Pandas, NumPy**
+- **Matplotlib / Seaborn**
+- **Streamlit** (for UI)
+- **Joblib** (for model serialization)
 
 ---
-
-## ⚙️ Installation and Setup
-
-Follow these steps to run the project locally 👇
-
-```bash
-# 1️⃣ Clone the repository
-git clone https://github.com/yourusername/Gemstone-Price-Predictor.git
-cd Gemstone-Price-Predictor
-
-# 2️⃣ Create a virtual environment (optional but recommended)
-python -m venv gemenv
-gemenv\Scripts\activate   # For Windows
-source gemenv/bin/activate  # For Mac/Linux
-
-# 3️⃣ Install dependencies
-pip install -r requirements.txt
-
-# 4️⃣ Run the Streamlit app
-streamlit run main.py
-````
-
----
-
-## 🧮 Model Training
-
-The model (`final_model.pkl`) was trained on a **diamond dataset** from Kaggle using `CatBoostRegressor`.
-
-### 🎯 Input Features:
-
-* `carat` — Weight of the diamond
-* `cut` — Quality of the cut (Fair, Good, Very Good, Premium, Ideal)
-* `color` — Diamond color grading (D–J)
-* `clarity` — Diamond clarity grading (I1–IF)
-* `depth` — Total depth percentage
-* `table` — Width of the diamond’s top relative to its widest point
-* `x`, `y`, `z` — Dimensions of the diamond (in mm)
-
-### 🧠 Target Variable:
-
-* `price` — Diamond price in USD 💰
-
----
-
-## 🧾 requirements.txt
-
-Make sure your `requirements.txt` file includes:
-
-```
-streamlit
-pandas
-numpy
-catboost
-scikit-learn
-joblib
-```
-
----
-
-## 🎨 Streamlit UI Theme (Optional)
-
-If you want to customize your Streamlit theme, create a file:
-
-**`.streamlit/config.toml`**
-
-```toml
-[theme]
-primaryColor="#00C853"
-backgroundColor="#0E1117"
-secondaryBackgroundColor="#262730"
-textColor="#FAFAFA"
-font="sans serif"
-```
-
----
-
-## 🖼️ App Preview
-
-![Gemstone Price Predictor](image.png)
-
----
-
-## 🧑‍💻 Author
-
-**Ashish Raj**
-🎓 B.Tech in Computer Science (Data Science) — Brainware University
-📍 Patna, Bihar, India
-
-🔗 [LinkedIn](https://www.linkedin.com/in/ashish-raj-tech/)
-🐙 [GitHub](https://github.com/Ashish570raj)
-
----
-
-## ⭐ Contributing
-
-Want to make improvements?
-
-1. Fork the repository
-2. Create your feature branch
-
-   ```bash
-   git checkout -b feature-XYZ
-   ```
-3. Commit your changes
-
-   ```bash
-   git commit -m "Add new feature"
-   ```
-4. Push to the branch
-
-   ```bash
-   git push origin feature-XYZ
-   ```
-5. Open a **Pull Request**
-
----
-
-## 📜 License
-
-This project is open source and available under the **MIT License**.
-
----
-
-## 💬 Feedback
-
-If you have any feedback, suggestions, or issues, feel free to reach out or create an issue on GitHub.
-
-> Made with ❤️ by **Ashish Raj**
-
----
-
-```
-
----
-
-Would you like me to generate a **`main.py`** (Streamlit UI + model loading + dropdown inputs + price prediction) that fits perfectly with this structure?
-```
