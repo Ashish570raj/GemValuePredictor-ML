@@ -54,3 +54,37 @@ Multiple regression models were tested — including Linear Regression, Ridge, L
 - **Joblib** (for model serialization)
 
 ---
+
+---
+
+##  How to Run Locally
+
+### Clone the Repository
+```bash
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
+```
+---
+## Create a Virtual Environment
+
+```bash
+python -m venv gemenv
+gemenv\Scripts\activate     # for Windows
+# source gemenv/bin/activate  # for macOS/Linux
+```
+---
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+---
+
+## Run Streamlit App
+
+```bash
+Run Streamlit App
+```
+---
+
