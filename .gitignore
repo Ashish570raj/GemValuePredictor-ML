@@ -44,7 +44,7 @@ catboost_info/
 *.cbm
 *_model.pkl
 final_model.pkl
-1_final_model.pkl
+
 
 # -----------------------------
 # Streamlit & Cache

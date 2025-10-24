@@ -55,8 +55,6 @@ Multiple regression models were tested — including Linear Regression, Ridge, L
 
 ---
 
----
-
 ##  How to Run Locally
 
 ### Clone the Repository
