@@ -1,18 +1,18 @@
-# 💎 Gemstone Price Prediction using Machine Learning
+# Gemstone Price Prediction using Machine Learning
 
 A Machine Learning web app built using **CatBoost Regressor** to predict gemstone (diamond) prices based on key attributes such as **carat, cut, color, clarity, depth, and table**.  
 This project is deployed using **Streamlit Cloud** and allows users to interactively input gemstone features and instantly get the predicted price.
 
 ---
 
-## 🚀 Project Overview
+##  Project Overview
 
 The goal of this project is to accurately predict the **price of diamonds** based on their physical characteristics and quality attributes.  
 Multiple regression models were tested — including Linear Regression, Ridge, Lasso, Decision Tree, Random Forest, XGBoost, and CatBoost — with **CatBoost Regressor** emerging as the best performer.
 
 ---
 
-## 📊 Model Performance Comparison
+## Model Performance Comparison
 
 | Model Name                | R² Score |
 |----------------------------|----------|
@@ -25,12 +25,12 @@ Multiple regression models were tested — including Linear Regression, Ridge, L
 | Ridge                      | 0.9373 |
 | Lasso                      | 0.9372 |
 
-✅ **Final Model Used:** CatBoost Regressor  
-📦 Model saved as: `1_final_model.pkl`
+**Final Model Used:** CatBoost Regressor  
+    Model saved as: `1_final_model.pkl`
 
 ---
 
-## 🧠 Features Used for Prediction
+##  Features Used for Prediction
 
 | Feature | Description |
 |----------|-------------|
@@ -43,7 +43,7 @@ Multiple regression models were tested — including Linear Regression, Ridge, L
 
 ---
 
-## 🧩 Tech Stack
+##  Tech Stack
 
 - **Python 3.12+**
 - **CatBoost Regressor**
