@@ -65,18 +65,17 @@ The goal is to accurately predict the **price of a diamond** given its character
 
 ## 📁 Project Structure
 
-- `1_EDA.ipynb` — exploratory data analysis, feature insights, and visualizations
-- `2__modeltrain.ipynb` — model development, training, hyperparameter tuning, and evaluation
-- `main.py` — Streamlit app for interactive diamond price prediction
-- `README.md` — project documentation and usage instructions
-- `requirements.txt` — Python dependencies
-- `train.csv` — training dataset
-- `test.csv` — test dataset
-- `diamond_cleaned.csv` — cleaned dataset used for modeling
-- `sample_submission.csv` — sample submission format
-- `1_final_model.pkl` — final trained CatBoost model
-- `catboost_info/` — CatBoost training logs and artifacts
-- `gemenv/` — local Python virtual environment
+<pre>
+GemValuePredictor-ML/
+├── 1_EDA.ipynb                 ← Exploratory Data Analysis
+├── 2_model_training.ipynb      ← Model training & comparison
+├── main.py                     ← Streamlit web app
+├── 1_final_model.pkl           ← Trained CatBoost pipeline
+├── train.csv                   ← Training dataset
+├── test.csv                    ← Test dataset
+├── requirements.txt            ← Python dependencies
+└── runtime.txt                 ← Python version for deployment
+</pre>
 
 ---
 
