@@ -1,88 +1,126 @@
-# Gemstone Price Prediction using Machine Learning
+# 💎 Gemstone Price Predictor — ML Web App
 
-A Machine Learning web app built using **CatBoost Regressor** to predict gemstone (diamond) prices based on key attributes such as **carat, cut, color, clarity, depth, and table**.  
-This project is deployed using **Streamlit Cloud** and allows users to interactively input gemstone features and instantly get the predicted price.
+A end-to-end Machine Learning project that predicts **diamond prices** based on physical and quality attributes.  
+Built with **CatBoost Regressor** and deployed as an interactive **Streamlit** web app.
 
----
-
-##  Project Overview
-
-The goal of this project is to accurately predict the **price of diamonds** based on their physical characteristics and quality attributes.  
-Multiple regression models were tested — including Linear Regression, Ridge, Lasso, Decision Tree, Random Forest, XGBoost, and CatBoost — with **CatBoost Regressor** emerging as the best performer.
+[![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)](https://streamlit.io/)
+[![CatBoost](https://img.shields.io/badge/Model-CatBoost-yellow)](https://catboost.ai/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 ---
 
-## Model Performance Comparison
+## 📌 Project Overview
 
-| Model Name                | R² Score |
-|----------------------------|----------|
-| **CatBoost Regressor**     | **0.9793** |
-| XGB Regressor              | 0.9787 |
-| Random Forest Regressor    | 0.9771 |
-| K-Neighbors Regressor      | 0.9721 |
-| Decision Tree              | 0.9568 |
-| Linear Regression          | 0.9373 |
-| Ridge                      | 0.9373 |
-| Lasso                      | 0.9372 |
-
-**Final Model Used:** CatBoost Regressor  
-    Model saved as: `1_final_model.pkl`
+The goal is to accurately predict the **price of a diamond** given its characteristics.  
+8 regression models were benchmarked end-to-end, with **CatBoost Regressor** achieving the best performance at **R² = 0.9793**.
 
 ---
 
-##  Features Used for Prediction
+## ▪ Model Performance Comparison
 
-| Feature | Description |
-|----------|-------------|
-| **Carat** | Weight of the diamond |
-| **Cut** | Quality of the cut (Fair, Good, Very Good, Premium, Ideal) |
-| **Color** | Diamond color grade (J, I, H, G, F, E, D) |
-| **Clarity** | Measure of how clear the diamond is (I1, SI2, SI1, VS2, VS1, VVS2, VVS1, IF) |
-| **Depth** | Total depth percentage |
-| **Table** | Width of top of diamond relative to widest point |
+| Model                     | MAE       | RMSE      | R² Score   |
+|---------------------------|-----------|-----------|------------|
+| **CatBoost Regressor** ✓  | **294.65** | **578.51** | **0.9793** |
+| XGB Regressor              | 296.98    | 585.52    | 0.9788     |
+| Random Forest Regressor    | 309.06    | 605.76    | 0.9773     |
+| K-Neighbors Regressor      | 349.47    | 671.29    | 0.9721     |
+| Decision Tree              | 422.17    | 831.62    | 0.9572     |
+| Linear Regression          | 671.59    | 1006.60   | 0.9373     |
+| Ridge                      | 671.61    | 1006.61   | 0.9373     |
+| Lasso                      | 672.86    | 1006.87   | 0.9373     |
 
----
-
-##  Tech Stack
-
-- **Python 3.12+**
-- **CatBoost Regressor**
-- **Scikit-learn**
-- **Pandas, NumPy**
-- **Matplotlib / Seaborn**
-- **Streamlit** (for UI)
-- **Joblib** (for model serialization)
+> **Final model:** CatBoost Regressor saved as `1_final_model.pkl`
 
 ---
 
-##  How to Run Locally
+## 🎛️ Input Features
 
-### Clone the Repository
-```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
-```
----
-## Create a Virtual Environment
+| Feature     | Type        | Description                                              |
+|-------------|-------------|----------------------------------------------------------|
+| `carat`     | Numerical   | Weight of the diamond                                    |
+| `cut`       | Categorical | Cut quality — Fair → Good → Very Good → Premium → Ideal  |
+| `color`     | Categorical | Color grade — J (worst) → D (best)                       |
+| `clarity`   | Categorical | Clarity grade — I1 (worst) → IF (best)                   |
+| `depth`     | Numerical   | Total depth percentage                                   |
+| `table`     | Numerical   | Width of top facet relative to widest point              |
+| `x`         | Numerical   | Length in mm                                             |
+| `y`         | Numerical   | Width in mm                                              |
+| `z`         | Numerical   | Depth in mm                                              |
 
-```bash
-python -m venv gemenv
-gemenv\Scripts\activate     # for Windows
-# source gemenv/bin/activate  # for macOS/Linux
-```
----
-
-## Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
 ---
 
-## Run Streamlit App
+## 🛠️ Tech Stack
 
-```bash
-Run Streamlit App
-```
+| Category       | Tools                                      |
+|----------------|--------------------------------------------|
+| Language       | Python 3.11                                |
+| ML Framework   | Scikit-learn, CatBoost, XGBoost            |
+| Data           | Pandas, NumPy                              |
+| Visualization  | Matplotlib, Seaborn, Plotly                |
+| Web App        | Streamlit                                  |
+| Serialization  | Joblib                                     |
+
 ---
+
+## 📁 Project Structure
+
+- `1_EDA.ipynb` — exploratory data analysis, feature insights, and visualizations
+- `2__modeltrain.ipynb` — model development, training, hyperparameter tuning, and evaluation
+- `main.py` — Streamlit app for interactive diamond price prediction
+- `README.md` — project documentation and usage instructions
+- `requirements.txt` — Python dependencies
+- `train.csv` — training dataset
+- `test.csv` — test dataset
+- `diamond_cleaned.csv` — cleaned dataset used for modeling
+- `sample_submission.csv` — sample submission format
+- `1_final_model.pkl` — final trained CatBoost model
+- `catboost_info/` — CatBoost training logs and artifacts
+- `gemenv/` — local Python virtual environment
+
+---
+
+## 🚀 Getting Started
+
+1. Create and activate a Python environment:
+   ```bash
+   python -m venv gemenv
+   gemenv\Scripts\activate
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the Streamlit app:
+   ```bash
+   streamlit run main.py
+   ```
+4. Open the provided local URL in your browser and enter diamond details to predict price.
+
+---
+
+## 🧠 What’s Included
+
+- Data preparation and cleaning for diamond pricing data
+- Exploratory data analysis to inspect distributions, outliers, and feature relationships
+- Feature engineering for categorical encoding and numeric predictors
+- Model benchmarking across eight regression algorithms
+- Final production-ready model using CatBoost Regressor
+- Interactive web app for live price prediction
+
+---
+
+## 📌 Notes
+
+- The final model is saved as `1_final_model.pkl`.
+- `main.py` loads the saved model and accepts the same feature set used during training.
+- `diamond_cleaned.csv` can be used to reproduce analysis, while `train.csv` and `test.csv` represent the original competition-style datasets.
+
+---
+
+## 📚 Recommended Next Steps
+
+- Review `1_EDA.ipynb` to inspect the EDA flow and confirm data cleaning decisions.
+- Review `2__modeltrain.ipynb` to see how model selection and evaluation were performed.
+- Update `requirements.txt` if additional packages are needed for your environment.
 

@@ -1,1 +1,32 @@
+# Virtual environments
 gemenv/
+venv/
+.env/
+.venv/
+
+# CatBoost auto-generated training logs
+catboost_info/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# IDE / Editor config
+.devcontainer/
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Intermediate / scratch data files
+diamond_cleaned.csv
+sample_submission.csv
+
+# Misc
+version.py
+image.png
